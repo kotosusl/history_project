@@ -1,42 +1,57 @@
 # history_project
 
-This template should help get you started developing with Vue 3 in Vite.
+Документальный веб-ресурс про Чернобыль.
 
-## Recommended IDE Setup
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Установка модулей
+Для запуска сайта локально потребуется установка модулей node.js. Для этого перейдите на официальный сайт nodejs.org и скачайте версию с пометкой LTS.
+Прямая ссылка на страницу с установщиком: https://nodejs.org/en/download
+Запустите скачанный файл и устанавливайте, как обычную программу, со стандартными настройками.
+При установке на Windows обязательно оставьте галочку «Automatically install the necessary tools», если она будет.
 
-## Recommended Browser Setup
+### Проверка установки
+Чтобы проверить, что все установилось, в терминале компьютера введите команду:
+```sh
+node -v
+```
+Вы должны увидеть версию Node.js (например, v18.16.0).
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+Затем введите:
+```sh
+npm -v
+```
+Появится версия npm (менеджера пакетов), например, 9.5.1 .
+Если обе команды показали номера версий — всё отлично, инструменты готовы!
 
-## Type Support for `.vue` Imports in TS
+### Копируем проект с GitHub
+Находим выше в проекте зеленую кнопку <> Code и нажмите на неё.
+В открывшемся окошке скопируйте ссылку из поля под надписью HTTPS (она будет начинаться с https://github.com/...).
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Открываем вашу IDE в новом проекте и заходим в терминал.
+Введите команду git clone, затем пробел, и вставьте скопированную ссылку. Должно получиться примерно так:
+```sh
+git clone https://github.com/имя-пользователя/название-репозитория.git
+```
 
-## Customize configuration
+Начнется скачивание файлов. Когда оно закончится, на вашей папке появится новая папка с названием проекта.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+В командной строке перейдите в папку скачанного проекта. Для этого введите
+```sh
+cd название-папки-проекта
+```
 
-## Project Setup
-
+Теперь введите команду:
 ```sh
 npm install
 ```
+Подождите, пока процесс завершится и снова появится строка для ввода команд.
 
-### Compile and Hot-Reload for Development
+## Запуск проекта (наконец-то)
+Вводим команду:
 
 ```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
+И переходим по ссылке-пути, который высветился. (Например:  ➜  Local:   http://localhost:5173/)
+Чтобы остановить работу сайта в терминале зажмине Ctrl+C
